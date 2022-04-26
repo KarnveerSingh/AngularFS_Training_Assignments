@@ -1,10 +1,3 @@
-//  Properties concept supports only in es5 and higher versions
-//  use target flag (-t) and refer es5
-//  tsc 03.PropertiesDemo.ts -t es5
-
-
-// Involving Read-only properties
-
 class Customer
 {
     public cid:number = 0;
