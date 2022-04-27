@@ -19,6 +19,9 @@ export class ProductComponent {
 
     if(this.totalAmount>10000){
       this.mystyle = "color:green;"
+    }else{
+      this.mystyle = "color:blue;"
+
     }
   }
 
