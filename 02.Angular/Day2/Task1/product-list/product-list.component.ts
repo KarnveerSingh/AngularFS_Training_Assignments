@@ -6,12 +6,12 @@ import { Products } from '../Product';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent  {
+export class ProductListComponent  implements OnInit{
 
   @Input()
   category:string='';
 
-  
+  filterProd:Products[]=[];
 
   productArr: Products[] = [
     { pid: 1, pname: "product1", price: 100, category: "category1", qty: 4 },
@@ -21,6 +21,9 @@ export class ProductListComponent  {
     { pid: 5, pname: "product5", price: 500, category: "category8", qty: 8 },
   ];
  
-  
+  ngOnInit(): void {
+    this.filterProd = this.productArr.filter(item=>item.category == this.category);
+
+  }
   
 }
