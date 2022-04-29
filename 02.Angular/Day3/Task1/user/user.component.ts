@@ -53,15 +53,7 @@ export class UserComponent  {
     }
   }
 
-  Prev_Click(){
-    if(this.userArr.length == 0){
-      this.propertyprev=true;
-
-    }else{
-      this.end = this.start;
-
-      this.start = this.start-4
-    }
+  
     
   }
 }
