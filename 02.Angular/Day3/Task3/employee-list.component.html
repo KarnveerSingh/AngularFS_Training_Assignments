@@ -1,0 +1,35 @@
+<p>employee-list works!</p>
+
+Min Value :<input type="text" [(ngModel)]="filterMin"/>&nbsp;&nbsp;&nbsp;
+Max Value :<input type="text" [(ngModel)]="filterMax" />&nbsp;&nbsp;
+<button (click)="Filter_Click()">Filter</button>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table border="2" width="400" cellspacing="0" cellpadding="5">
+    <tr>
+      <th>Emp Number</th>
+      <th>Emp Name</th>
+      <th> Job</th>
+      <th>Sal</th>
+      <th>DeptNo</th>
+    </tr>
+  
+    <tr *ngFor="let item of empArr | filtersalary: value1: value2">
+        <td>{{item.empnumber}}</td>
+        <td>{{item.empname}}</td>
+        <td>{{item.empjob}}</td>
+        <td>{{item.empsal}}</td>
+        <td>{{item.empdept}}</td>
+       
+    
+       
+    </tr>
+  
+    <tr *ngIf="empArr.length == 0">
+      <td colspan="4">** No departments avaialble in the database</td>
+    </tr>
+  
+  </table>
