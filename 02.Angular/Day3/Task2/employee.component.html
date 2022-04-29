@@ -1,0 +1,51 @@
+
+
+
+
+
+<table border="2" width="400" cellspacing="0" cellpadding="5">
+    <tr>
+      <th>Emp Name</th>
+      <th>Emp grade</th>
+     
+    </tr>
+  
+    <tr *ngFor="let item of EmpArray">
+        <td>{{item.EmpName}}</td>
+        <td>{{item.EmpGrade}}</td>
+        
+       
+    
+       
+    </tr>
+  
+    <tr *ngIf="EmpArray.length == 0">
+      <td colspan="4">** No Employee avaialble in the database</td>
+    </tr>
+  
+  </table>
+
+
+
+  
+<table border="2" width="400" cellspacing="0" cellpadding="5">
+    <tr>
+      <th>Emp Name</th>
+      <th>Emp grade</th>
+     
+    </tr>
+  
+    <tr *ngFor="let item of EmpArray">
+        <td>{{item.EmpName }}</td>
+        <td>{{item.EmpGrade |gradepipe}}</td>
+        
+       
+    
+       
+    </tr>
+  
+    <tr *ngIf="EmpArray.length == 0">
+      <td colspan="4">** No Employee avaialble in the database</td>
+    </tr>
+  
+  </table>
