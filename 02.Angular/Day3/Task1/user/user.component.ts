@@ -12,7 +12,7 @@ export class UserComponent  {
   end:number =4;
 
   property:boolean = false;
-  propertyprev:boolean = false;
+  
 
 
   userArr:user[] = [
