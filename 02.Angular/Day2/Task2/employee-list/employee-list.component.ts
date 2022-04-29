@@ -25,10 +25,11 @@ export class EmployeeListComponent implements OnInit {
 
 
   ngOnChanges(){
-    if(this.employeefilter == "sortbyId"){
-      this.empArrcopy = this.empArr.sort(function(a,b){return a.empnumber < b.empnumber ? 1 :-1});
+    
+      this.empArrcopy = this.empArr.sort((a:any,b:any)=>a[this.employeefilter] < b[this.employeefilter] ? -1 : 1);;
+
       this.empArr = this.empArrcopy;
-    }
+    
 
     
 
