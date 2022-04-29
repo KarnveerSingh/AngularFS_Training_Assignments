@@ -8,8 +8,7 @@ import { Emps } from '../Emps';
 })
 export class EmployeeListComponent implements OnInit {
 
-  @Input() 
-  employeefilter:string = "";
+ 
  
   value1:string  = "";
  
@@ -38,15 +37,7 @@ export class EmployeeListComponent implements OnInit {
   }
 
 
-  ngOnChanges(){
-    if(this.employeefilter != ""){
-      
-      // this.empArrcopy = this.empArr.sort((a,b) => {return a.empname < b.empname ? 1 :-1});
-      this.empArrcopy = this.empArr.sort((a:any,b:any)=>a[this.employeefilter] < b[this.employeefilter] ? -1 : 1);;
-      // this.empArrcopy = ;
-      this.empArr = this.empArrcopy;
-    }
-    // alert(this.employeefilter);
+ 
    
   }
 
