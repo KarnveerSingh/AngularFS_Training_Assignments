@@ -36,7 +36,7 @@ export class EmpListComponent implements OnInit {
    empObj.sal=this.empsal,
    empObj.deptno = this.empdept
   this._dataService.AddEmp(empObj);
-  
+  this.clearField();
   }
 
 
@@ -44,5 +44,13 @@ export class EmpListComponent implements OnInit {
     if(confirm("Are you sure want to delete this record?") === true)
     this._dataService.RemoveEmp(empno);
 
+  }
+
+   clearField(){
+    this.empnumber=0;
+    this.empname = "";
+    this.empjob= "";
+    this.empsal=0;
+    this.empdept = 0;
   }
 }
