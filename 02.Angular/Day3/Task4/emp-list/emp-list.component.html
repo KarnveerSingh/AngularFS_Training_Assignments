@@ -1,0 +1,39 @@
+<h3>Working with Services in Angular</h3>
+<hr />
+
+<br />
+<input type="text" [(ngModel)]="empnumber" placeholder="empnumber" />&nbsp;
+<input type="text" [(ngModel)]="empname" placeholder="empname" />&nbsp;
+<input type="text" [(ngModel)]="empjob" placeholder="empjob" />&nbsp;
+<input type="text" [(ngModel)]="empsal" placeholder="empsal" />&nbsp;
+<input type="text" [(ngModel)]="empdept" placeholder="empdept" />&nbsp;
+<button (click)="Add_click()">Add Employee</button>
+<br >
+
+<hr>
+<br /><br />
+
+<table width="500" cellspacing="0" cellpadding="3" border="2">
+    <tr>
+        <th>Emp Number</th>
+        <th>Emp Name</th>
+        <th>Emp Job</th>
+        <th>Emp Salary</th>
+        <th>Emp Deptno</th>
+        <th>Action</th>
+    </tr>
+
+    <tr *ngFor="let item of empArray">
+        <td>{{item.empno}}</td>
+        <td>{{item.ename }}</td>
+        <td>{{item.job | uppercase}}</td>
+        <td>{{item.sal | currency}}</td>
+        <td>{{item.deptno}}</td>
+        <td><a  (click)="delete_click(item.empno)" href="javascript:void(0);">
+        <img src="assets/delete.png" alt="" width="20" />
+           </a></td>
+        
+    </tr>
+</table>
+
+<hr />
