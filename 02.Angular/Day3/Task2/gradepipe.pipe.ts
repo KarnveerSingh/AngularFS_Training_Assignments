@@ -13,10 +13,6 @@ export class GradepipePipe implements PipeTransform {
      if(input ==2) output = "Excllent";
      if(input ==3) output = "Good";
      if(input ==4) output = "Average";
-     if(input ==5) output = "OutStanding";
-     if(input ==6) output = "Excllent";
-     if(input ==7) output = "Good";
-     if(input ==8) output = "Average";
  
  
      return output;
