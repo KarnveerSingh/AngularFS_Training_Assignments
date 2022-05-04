@@ -29,9 +29,9 @@ h2{
 <h2>Todo List</h2>
 
 <div *ngFor="let item of todoListObj; let i = index;">
-    <span [ngStyle]="{ 'color': (item.isDone == true ? 'Red' : ''), 'text-decoration-line':(item.isDone == true ? 'line-through' : '')}">{{item.itemName}}</span>&nbsp;&nbsp;
+    <span [ngStyle]="{ 'color': (item.isDone == true ? 'Red' : ''), 'text-decoration-line':(item.isDone == true ? 'line-through' : 'none')}">{{item.itemName}}</span>&nbsp;&nbsp;
  
-      <input type="checkbox" [checked]="item.isDone" />
+      <input type="checkbox" [(ngModel)]="item.isDone" />
     <a  (click)="delete_click(item.id)" href="javascript:void(0);">
         <img src="assets/delete.png" alt="" width="20" />
       </a>&nbsp;
