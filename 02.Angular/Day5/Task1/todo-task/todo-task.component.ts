@@ -39,7 +39,7 @@ export class TodoTaskComponent implements OnInit {
 
 
   update_click(){
-
+    
   }
 
 
@@ -51,4 +51,8 @@ export class TodoTaskComponent implements OnInit {
   DeleteAll_click(){
     this.todoListObj = [{}];
   }
+
+
+  
+  
 }
