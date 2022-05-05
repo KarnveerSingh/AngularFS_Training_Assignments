@@ -1,0 +1,42 @@
+<p>employee-list-json-server works!</p>
+<h3>Perform CRUD operations with remote data in Angular</h3>
+<hr/>
+
+<input type="text"  [(ngModel)]="empname"  placeholder="Employee Name"  /> &nbsp;&nbsp;
+<input type="text"  [(ngModel)]="empjob"  placeholder="Job"  />&nbsp;&nbsp;
+<input type="text"  [(ngModel)]="empsal"  placeholder="Salary"  />&nbsp;&nbsp;
+<input type="text"  [(ngModel)]="empdept"  placeholder="Department" />  &nbsp;&nbsp;
+<br/><br/>
+<input type="button"  value="Get Employees" (click)="getData_click()"  />&nbsp;&nbsp;
+<input type="button"  value="Add Employee" (click)="addData_click()"  />&nbsp;&nbsp;
+<input type="button"  value="Update Employee" (click)="updateData_click()"  />&nbsp;&nbsp;
+<input type="button"  value="Clear Fields" (click)="clearFields()"  />&nbsp;&nbsp;
+<hr/>
+
+
+<table border="2"   cellspacing="0">
+	<tr>
+	  <th>Employee Id</th>
+	  <th>Employee Name</th>
+	  <th>Job</th>
+	  <th>Salary</th>
+	  <th>Department</th>
+	  <th>Action</th>
+
+    <th></th>
+	</tr>
+
+	<tr *ngFor="let item of resObj">
+	  <td>{{item.id}}</td>
+	  <td>{{item.empname}}</td>
+	  <td>{{item.empjob}}</td>
+	  <td>{{item.empsal}}</td>
+	  <td>{{item.empdept}}</td>
+    <td align="center">
+      <a href="javascript:void(0);" (click)="selectData_click(item.id)">Select</a> |
+      <a href="javascript:void(0);" (click)="deleteData_click(item.id)">Delete</a>
+    </td>
+	</tr>
+  </table>
+
+  <hr>
