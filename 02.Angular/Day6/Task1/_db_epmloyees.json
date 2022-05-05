@@ -1,0 +1,32 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "empname": "smith",
+      "empjob": "Admin",
+      "empsal": 1000,
+      "empdept": 10
+    },
+    {
+      "id": 3,
+      "empname": "ramesh",
+      "empjob": "hr",
+      "empsal": 5000,
+      "empdept": 10
+    },
+    {
+      "id": 4,
+      "empname": "gfdg",
+      "empjob": "dfgdfg",
+      "empsal": "555",
+      "empdept": "555"
+    },
+    {
+      "id": 5,
+      "empname": "dfdf",
+      "empjob": "dfsd",
+      "empsal": "50000",
+      "empdept": "80000"
+    }
+  ]
+}
