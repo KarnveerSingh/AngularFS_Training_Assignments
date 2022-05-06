@@ -8,7 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ModelDrivenComponent implements OnInit {
 
-  validatePatternForVRN = "^[a-zA-Z0-9]{10}$";
+  validatePatternForVRN = "^[A-Z0-9]{10}$";
 
   vehicleRegForm:FormGroup = new FormGroup({
     oname : new FormControl("",Validators.required),
