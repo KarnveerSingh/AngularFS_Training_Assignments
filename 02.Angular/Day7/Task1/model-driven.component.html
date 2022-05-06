@@ -7,7 +7,7 @@
 <h3> Angular Form Validations using  Model Driven  </h3>
 <hr/>
 
-<from [formGroup]="vehicleRegForm" (submit)="submit_click()">
+<form [formGroup]="vehicleRegForm" (submit)="submit_click()">
 
     <fieldset>
         <legend>Vehicle Registration Form</legend>
@@ -39,4 +39,4 @@
         <button [disabled]="vehicleRegForm.invalid">Register</button>
 
     </fieldset>
-</from>
+</form>
