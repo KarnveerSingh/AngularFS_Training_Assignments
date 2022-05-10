@@ -52,12 +52,12 @@ describe('ProductComponent', () => {
 
 
   //result method by calling method  getTotalAmount()
-  it('should result contains "Total Amount : 0"', () => {
-    component.unitprice = component.unitprice;
-    component.quantity = component.quantity;
+  it('should result contains "Total Amount : NaN"', () => {
+    component.unitprice = 556;
+    component.quantity = "fdg";
     component.getTotalAmount();
     const strOutput: string = component.totalAmount;
-    expect(strOutput).toBe("Total Amount : 0");
+    expect(strOutput).toBe("Total Amount : NaN");
   });
 
 
