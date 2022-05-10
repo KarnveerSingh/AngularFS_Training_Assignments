@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent implements OnInit {
 
   productname:string = '';
-  unitprice = 0;
-  quantity = 1;
+  unitprice:any = 0;
+  quantity:any = 1;
   totalAmount:string = '';
   mystyle:string = '';
 
