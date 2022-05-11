@@ -43,9 +43,9 @@ describe('DeptService', () => {
   // d.   Test Remove Dept -- for invalid     number
   it('Test Remove Dept -- for invalid number', () => {
 
-    service.removeDept(34)
+   let result  = service.removeDept(34)
 
-    expect(-1).toBe(-1);
+    expect(result).toEqual(service.deptsArray.length);
    });
 
 });
